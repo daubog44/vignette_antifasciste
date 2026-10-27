@@ -214,3 +214,49 @@ def _insert(new):
         else:
             PROT.append(e)
 _insert(_NEW)
+
+# --- aggiunte: teatro, canzoni, cinema e TV ---
+_NEW2 = [
+_P(13, "p-nerone", "petrolini-nerone-1930.jpg",
+ "Nerone", "Ettore Petrolini, film di Alessandro Blasetti", "in scena dal 1917, film del 1930", "teatro e cinema",
+ "https://it.wikipedia.org/wiki/Nerone_(film_1930)", "Wikipedia (scheda del film)",
+ "Nerone parla al popolo dopo l'incendio di Roma. Promette che la città risorgerà «più bella e più superba che pria».",
+ "Ogni frase vuota strappa un «Bravo!» alla folla, e Nerone risponde «Grazie!»; il botta e risposta si ripete finché non resta che il rito dell'applauso. Il pubblico ci vedeva il Duce al balcone di piazza Venezia, la retorica che vive del consenso che si fabbrica da sola.",
+ "Petrolini portava il personaggio in scena da prima della marcia su Roma, e non è chiaro che fosse nato contro Mussolini: c'è anzi chi pensa che sia stato Mussolini a imitare certe pose. Il Duce era un suo ammiratore, e Petrolini continuò a recitarlo indisturbato; sia lui sia Blasetti erano vicini al regime, e per alcuni studiosi la lettura satirica è venuta soprattutto dopo. Il film, tra i primi sonori italiani, conserva la versione più famosa.",
+ "Il film è in sostanza teatro ripreso: Petrolini recita in macchina il suo repertorio di maschere, Gastone, Nerone, Pulcinella. La comicità è tutta nella cadenza, nelle pause, nelle parole ripetute fino a svuotarle."),
+_P(33, "p-nazty", "you-nazty-spy-1940.jpg",
+ "You Nazty Spy!", "The Three Stooges, regia di Jules White", "19 gennaio 1940", "cortometraggio, Columbia Pictures",
+ "https://en.wikipedia.org/wiki/You_Nazty_Spy!", "Wikipedia (scheda del film)",
+ "Nel paese immaginario di Moronica, tre fabbricanti d'armi mettono al potere tre imbianchini, perché li credono abbastanza stupidi da obbedire. Moe diventa il dittatore Moe Hailstone, con baffetti e ciuffo; Larry e Curly sono i suoi ministri.",
+ "Gli avversari chiamavano Hitler per scherno «l'imbianchino», e il film lo prende alla lettera: il dittatore è un imbianchino messo lì da chi vende cannoni. Moe infila nei comizi parole in yiddish, la lingua degli ebrei che il nazismo perseguitava. Alla fine il regime cade e i tre finiscono sbranati dai leoni.",
+ "Uscì nove mesi prima del Grande dittatore di Chaplin, quando gli Stati Uniti erano ancora neutrali e Hollywood evitava di attaccare la Germania. È considerato il primo film di Hollywood a ridicolizzare Hitler, e Moe Howard, nato Moses Horwitz, il primo attore americano a interpretarlo. Ebbe un seguito nel 1941, I'll Never Heil Again.",
+ "Slapstick puro: schiaffi, dita negli occhi, cadute. Il linguaggio più basso del cinema comico applicato al potere più alto è già di per sé la satira."),
+_P(33, "p-pippo", "pippo-non-lo-sa-1940.jpg",
+ "Pippo non lo sa", "Mario Panzeri e Nino Rastelli (testo), Gorni Kramer (musica)", "1939", "canzone, incisa da Silvana Fioresi con il Trio Lescano",
+ "https://it.wikipedia.org/wiki/Pippo_non_lo_sa", "Wikipedia (scheda della canzone)",
+ "Una canzonetta swing: Pippo va in giro vestito al contrario, la giacca sopra il cappotto, le calze sopra le scarpe, convinto di essere bellissimo, e non si accorge che al suo passaggio ride tutta la città.",
+ "Nel testo nessun nome, nessuna divisa. Ma il pubblico ci riconobbe Achille Starace, il segretario del partito fascista: magro, impettito, famoso per le uniformi e per le regole di stile imposte agli italiani, come l'abolizione della stretta di mano. Il bersaglio non è il regime, è il suo gerarca più ridicolo.",
+ "La canzone ebbe un enorme successo e, proprio perché l'allusione era evidente, dovette fare i conti con la censura. Nel 1962 Kramer raccontò un'altra storia: il Pippo della canzone sarebbe stato il direttore d'orchestra Pippo Barzizza, con cui aveva litigato. Satira o no, il pubblico aveva già deciso. L'orchestra di Kramer, del resto, era boicottata dalla radio di Stato, l'EIAR, perché suonava jazz.",
+ "Il ritmo swing e le voci intrecciate del Trio Lescano erano la musica più moderna dell'Italia di allora. La leggerezza è la copertura: una presa in giro cantata con il sorriso."),
+_P(57, "p-badoglieide", "la-badoglieide-1944.jpg",
+ "La Badoglieide", "Nuto Revelli e i partigiani della IV banda GL", "notte tra il 25 e il 26 aprile 1944", "canzone partigiana, valli del Cuneese",
+ "https://it.wikipedia.org/wiki/La_Badoglieide", "Wikipedia (testo e note)",
+ "Una canzone in strofe rivolta direttamente al maresciallo Pietro Badoglio, capo del governo dopo la caduta di Mussolini, con un ritornello in piemontese.",
+ "Le strofe si rivolgono a Badoglio con finta confidenza e ripercorrono la sua carriera: la guerra d'Etiopia e il titolo di duca di Addis Abeba, le campagne di Francia, Grecia e Russia, le partite a bocce a Grazzano dopo le dimissioni, il 25 luglio, l'armistizio, la fuga del re. Il ritornello gli dice che nessun voltafaccia lo salverà: chi ha servito il fascismo per vent'anni non può presentarsi come liberatore.",
+ "Secondo Revelli il testo nacque in una notte, da otto o nove partigiani di Giustizia e Libertà riuniti in una cascina sul monte Tibert, sull'aria della canzonetta «E non vedi che sono toscano». Divenne uno dei canti più diffusi della Resistenza nel Nord, antimonarchico e antibadogliano. Ne circolò anche una versione con il testo cambiato, cantata dai militari della Repubblica sociale.",
+ "Satira cantata, nata per essere imparata a memoria e cambiata strada facendo: rime facili, tono da osteria, e un'invettiva che diventa un rito collettivo."),
+_P("svg", "p-hilter", "monty-python-mr-hilter-1970.jpg",
+ "Mr. Hilter e le elezioni suppletive di Minehead", "Monty Python, con John Cleese", "4 gennaio 1970", "Monty Python's Flying Circus, episodio «The Naked Ant», BBC",
+ "https://en.wikipedia.org/wiki/List_of_Monty_Python%27s_Flying_Circus_episodes", "Wikipedia (elenco degli episodi)",
+ "In una pensione di Minehead, nel Somerset, alloggiano tre ospiti in uniforme nazista che studiano una carta geografica: «Mr. Hilter», «Bimmler» e «Ron Vibbentrop». La padrona di casa non nota nulla. Hilter si candida alle elezioni locali e arringa dal balcone una manciata di passanti indifferenti.",
+ "I travestimenti sono ridicoli, nomi storpiati di una lettera, eppure funzionano: l'Inghilterra di provincia è troppo educata o troppo distratta per accorgersene. E il comizio del Führer, ridotto a una campagna elettorale nel Somerset, non commuove nessuno.",
+ "Nel 1970 i gerarchi nazisti fuggiti in Sud America erano un tema da cronaca, e la Gran Bretagna aveva una lunga abitudine a ridere di Hitler. È uno degli sketch più citati del primo ciclo del Flying Circus.",
+ "Comicità dell'assurdo, fatta di slittamenti di registro: il linguaggio di Norimberga dentro la quiete di una pensione inglese. L'accento tedesco esagerato è parte della caricatura."),
+]
+def _insert_before(e, before):
+    idx = [q["key"] for q in PROT].index(before) if before else None
+    if idx is None: PROT.append(e)
+    else: PROT.insert(idx, e)
+_before = {"p-badoglieide": "p-cantachiaro", "p-hilter": "p-amarcord"}
+for _e in _NEW2:
+    _insert_before(_e, _before.get(_e["key"]))
