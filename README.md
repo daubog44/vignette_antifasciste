@@ -15,7 +15,7 @@ Un excursus storico in una sola pagina web: 77 immagini dal 1914 a oggi, ognuna 
 
 ## Rigenerare la pagina
 
-I testi stanno in due file: `sorgenti/content.py` (titoli, date, capitoli, collegamenti) e `sorgenti/testi.py` (per ogni immagine: cosa si vede, l'ironia, il contesto, il segno). Dopo una modifica:
+I testi stanno in tre file: `sorgenti/content.py` (titoli, date, capitoli, collegamenti), `sorgenti/testi.py` (per ogni immagine: cosa si vede, l'ironia, il contesto, il segno) e `sorgenti/prot.py` (le schede delle opere protette). Dopo una modifica:
 
 ```sh
 python3 sorgenti/build.py
@@ -31,4 +31,4 @@ Settings → Pages → Source: *Deploy from a branch* → branch `main`, cartell
 
 Tutte le immagini vengono da Wikimedia Commons e sono di pubblico dominio oppure sotto licenza Creative Commons. Per quelle CC l'attribuzione completa è nell'elenco «Crediti delle immagini» in fondo alla pagina, con il collegamento alla scheda di Commons (i dati sono anche in `sorgenti/credits.json`).
 
-Le opere ancora protette da diritto d'autore (David Low, John Heartfield, Disney, i vignettisti e i meme contemporanei) non sono incluse: la pagina le cita con un collegamento alla fonte.
+Le opere ancora protette da diritto d'autore (David Low, John Heartfield, Disney, Zerocalcare e altre) hanno una scheda completa con il collegamento all'originale, ma l'immagine non è nella repo. Chi tiene una copia privata può salvarla nella cartella `privato/` con il nome indicato in `privato/LEGGIMI.txt`: la pagina aperta in locale la mostra al suo posto. La cartella `privato/` è esclusa da git.

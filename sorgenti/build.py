@@ -3,6 +3,7 @@
 import json, html, importlib
 import content as C
 from testi import T as TX
+from prot import PROT
 importlib.reload(C)
 
 import os
@@ -91,6 +92,20 @@ h3.sec{font-family:var(--label); text-transform:uppercase; letter-spacing:.14em;
 .credits li{margin-bottom:4px}
 footer{margin-top:60px; padding:24px 0 56px; border-top:3px double var(--ink)}
 
+/* Opere protette */
+.ph{width:100%; max-width:640px; min-height:200px; border:1px dashed #4a443a; border-radius:6px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; padding:28px 18px; text-align:center; color:var(--stage-ink); font-family:var(--label)}
+.ph-lab{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--stage-muted)}
+.ph-btn{background:var(--accent); color:#16130f; text-decoration:none; font-weight:700; font-size:15px; letter-spacing:.04em; text-transform:uppercase; padding:11px 20px; border-radius:999px}
+.ph-src{font-size:13px; color:var(--stage-muted)}
+.ph-note{display:none; font-size:12.5px; color:var(--stage-muted); max-width:46ch}
+.ph-note code{color:var(--stage-ink)}
+.local .ph-note{display:block}
+.has-local .ph{display:none}
+.pbtn{all:unset; cursor:zoom-in; display:block; max-width:min(1500px,100%)}
+.pbtn[hidden]{display:none}
+.pbtn img{max-height:92vh; margin:0 auto; box-shadow:0 18px 50px rgba(0,0,0,.5); background:#fff}
+figure.prot .num{color:var(--accent)}
+
 /* Pulsante carosello */
 .cta{display:inline-flex; align-items:center; gap:10px; margin-top:22px; font-family:var(--label); font-weight:700; font-size:16px; letter-spacing:.04em; text-transform:uppercase; background:var(--ink); color:var(--paper); border:0; border-radius:999px; padding:13px 22px; cursor:pointer}
 .cta .tri{width:0; height:0; border-left:11px solid var(--accent); border-top:7px solid transparent; border-bottom:7px solid transparent}
@@ -157,11 +172,21 @@ def build():
             meta = " · ".join(x for x in [author, date, pub] if x)
             star = '<span class="star">Da vedere</span>' if big else ""
             load = "eager" if n < 2 else "lazy"
-            o.append(f'<figure class="plate"><div class="stage"><button type="button" data-g="{n}" aria-label="Apri a schermo intero: {esc(title)}">'
+            o.append(f'<figure class="plate" data-i="{n}"><div class="stage"><button type="button" data-g="{n}" aria-label="Apri a schermo intero: {esc(title)}">'
                      f'<img src="{s}" width="{w}" height="{h}" loading="{load}" decoding="async" alt="{esc(title)} – {esc(author)}{(", " + esc(date)) if date else ""}"></button><p class="zoomhint">Tocca per ingrandire</p></div>'
                      f'<figcaption><span class="num">{n+1:02d} / {len(ALL)}</span><h3>{esc(title)}</h3><p class="meta">{star}{esc(meta)}</p><p class="blk"><span class="lab">Cosa si vede</span>{esc(TX[idx]['d'])}</p><p class="blk iro"><span class="lab">{esc(TX[idx].get('il', "L'ironia"))}</span>{esc(TX[idx]['i'])}</p><p class="blk"><span class="lab">Il contesto</span>{esc(TX[idx]['s'])}</p><p class="blk"><span class="lab">Il segno</span>{esc(TX[idx]['a'])}</p></figcaption></figure>')
             n += 1
-    o.append('<div class="wrap tail" id="altro"><h2>Le vignette che mancano</h2>')
+            for P in [q for q in PROT if q["after"] == idx]:
+                pm = " · ".join(x for x in [P["author"], P["date"], P["pub"]] if x)
+                o.append(f'<figure class="plate prot" data-local="privato/{esc(P["file"])}" data-t="{esc(P["title"])}" data-m="{esc(P["author"] + " · " + P["date"])}"><div class="stage">'
+                         f'<div class="ph"><span class="ph-lab">Opera protetta da diritto d\'autore</span>'
+                         f'<a class="ph-btn" href="{esc(P["link"])}" target="_blank" rel="noopener">Guardala qui ↗</a><span class="ph-src">{esc(P["where"])}</span>'
+                         f'<span class="ph-note">Copia privata: salvala come <code>privato/{esc(P["file"])}</code> accanto a questa pagina e comparirà qui.</span></div>'
+                         f'<button type="button" class="pbtn" hidden aria-label="Apri a schermo intero: {esc(P["title"])}"><img alt="{esc(P["title"])} – {esc(P["author"])}"></button></div>'
+                         f'<figcaption><span class="num">Scheda · opera protetta</span><h3>{esc(P["title"])}</h3><p class="meta">{esc(pm)}</p>'
+                         f'<p class="blk"><span class="lab">Cosa si vede</span>{esc(P["d"])}</p><p class="blk iro"><span class="lab">L\'ironia</span>{esc(P["i"])}</p>'
+                         f'<p class="blk"><span class="lab">Il contesto</span>{esc(P["s"])}</p><p class="blk"><span class="lab">Il segno</span>{esc(P["a"])}</p></figcaption></figure>')
+    o.append('<div class="wrap tail" id="altro"><h2>Per approfondire</h2>')
     for title, intro, items in C.LINKS:
         o.append(f'<h3 class="sec">{esc(title)}</h3>')
         if intro: o.append(f'<p class="note">{esc(intro)}</p>')
@@ -196,7 +221,7 @@ def build():
              '<div class="vw-hint" id="vw-h">Pizzica, doppio tocco o rotella per ingrandire</div>'
              '<div class="vw-info" id="vw-info"><div class="in" id="vw-info-in"></div></div></div>'
              '<div class="vw-strip" id="vw-strip"></div></div>')
-    o.append('<script>var ALL=' + json.dumps(data, ensure_ascii=False) + ';</script>')
+    o.append('<script>var BASE=' + json.dumps(data, ensure_ascii=False) + ';</script>')
     o.append(r"""<script>
 (function(){
   try{ history.scrollRestoration='manual'; }catch(e){}
@@ -204,8 +229,20 @@ def build():
       T=document.getElementById('vw-t'), M=document.getElementById('vw-m'), C=document.getElementById('vw-c'),
       H=document.getElementById('vw-h'), INFO=document.getElementById('vw-info'), INFOIN=document.getElementById('vw-info-in'),
       STRIP=document.getElementById('vw-strip'), BI=document.getElementById('vw-i'), BP=document.getElementById('vw-play'),
-      CAPS=document.querySelectorAll('figure.plate figcaption'), FIGS=document.querySelectorAll('figure.plate');
+      ALL=[], FIGS=[], CAPS=[];
   var g=0, sc=1, tx=0, ty=0, fw=0, fh=0, MAX=6, open=false, timer=null, built=false, hinted=false;
+  function reindex(){ ALL=[]; FIGS=[]; CAPS=[]; var fs=document.querySelectorAll('figure.plate');
+    for(var k=0;k<fs.length;k++){ var f=fs[k], it=null;
+      if(f.hasAttribute('data-i')) it=BASE[+f.getAttribute('data-i')];
+      else if(f.classList.contains('has-local')){ var pi=f.querySelector('.pbtn img'); it={s:pi.getAttribute('src'),th:pi.getAttribute('src'),w:pi.naturalWidth,h:pi.naturalHeight,t:f.getAttribute('data-t'),m:f.getAttribute('data-m')}; }
+      if(!it) continue; var bb=f.querySelector('[data-g]'); if(bb) bb.setAttribute('data-g',ALL.length);
+      ALL.push(it); FIGS.push(f); CAPS.push(f.querySelector('figcaption')); }
+    if(built){ STRIP.innerHTML=''; built=false; } }
+  reindex();
+  if(location.protocol==='file:'){ document.documentElement.classList.add('local');
+    Array.prototype.forEach.call(document.querySelectorAll('figure.prot'),function(f){ var t=new Image();
+      t.onload=function(){ var b=f.querySelector('.pbtn'); b.querySelector('img').src=t.src; b.hidden=false; b.setAttribute('data-g','0'); f.classList.add('has-local'); reindex(); };
+      t.src=f.getAttribute('data-local'); }); }
 
   function buildStrip(){ if(built) return; built=true;
     ALL.forEach(function(a,i){ var b=document.createElement('button'); b.type='button'; b.setAttribute('aria-label',(i+1)+'. '+a.t);

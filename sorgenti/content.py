@@ -82,7 +82,7 @@ CHAPTERS = [
  dict(id="estero", num="V", years="1922–1939", title="Il mondo ride del Duce",
   text=[
    "Messa a tacere in Italia, la satira su Mussolini emigra. Per tutti gli anni Venti e Trenta il Duce è uno dei personaggi più disegnati del mondo: la mascella, il mento in avanti, la posa marziale e il cranio lucido diventano una sigla riconoscibile da Madrid a Shanghai.",
-   "In Spagna Luis Bagaría lo ridicolizza sul quotidiano El Sol in un italiano maccheronico inventato. A Londra David Low, sull'Evening Standard, lo disegna prima come Cesare da operetta e poi come comprimario di Hitler; i suoi lavori vengono vietati in Italia e in Germania (sono ancora protetti da diritto d'autore, per questo qui non ci sono). Da Praga John Heartfield dedica fotomontaggi alla guerra d'Etiopia. Negli Stati Uniti Clifford Berryman lo segue per tutto il decennio. Persino la stampa egiziana, allora sotto forte influenza britannica, ne fa un bersaglio fisso.",
+   "In Spagna Luis Bagaría lo ridicolizza sul quotidiano El Sol in un italiano maccheronico inventato. A Londra David Low, sull'Evening Standard, lo disegna prima come Cesare da operetta e poi come comprimario di Hitler; i suoi lavori vengono vietati in Italia e in Germania (sono ancora protetti da diritto d'autore: qui trovi le loro schede, con il collegamento agli originali). Da Praga John Heartfield dedica fotomontaggi alla guerra d'Etiopia. Negli Stati Uniti Clifford Berryman lo segue per tutto il decennio. Persino la stampa egiziana, allora sotto forte influenza britannica, ne fa un bersaglio fisso.",
    "Il filo è quello della politica estera fascista: Corfù (1923), la guerra d'Etiopia con l'uso dei gas (1935–36), l'Asse Roma-Berlino (1936), l'Anschluss dell'Austria (marzo 1938), le rivendicazioni su Nizza, Corsica, Tunisi e Gibuti (novembre 1938), l'invasione dell'Albania (aprile 1939).",
   ],
   figs=[
@@ -234,22 +234,14 @@ CHAPTERS = [
 ]
 
 LINKS = [
- ("Le vignette che mancano", "Queste non le posso ripubblicare qui: sono ancora protette da diritto d'autore (David Low fino al 2034, John Heartfield fino al 2039, i film Disney) oppure non ne esiste una copia digitale libera. Le trovi a questi link.", [
-  ("Giuseppe Scalarini – «Il santo manganello»", "Avanti!, 27 settembre 1924. Solo il manganello, pesante come una clava, insanguinato. Tra le sue tavole più forti.", "https://www.centrostudiustica.it/images/PDF/pdf-copertine-rivista-lettera/Lettera-N.36-37/L36-37_Conf_IpotiposiScalarini_Delfini.pdf"),
-  ("David Low – «Rendezvous»", "Evening Standard, 20 settembre 1939. Hitler e Stalin si inchinano sul cadavere della Polonia.", "https://en.wikipedia.org/wiki/David_Low_(cartoonist)"),
+ ("Altre opere da vedere", "Opere che non hanno una scheda qui: di alcune esiste solo una copia a bassissima risoluzione, altre sono raccolte negli archivi.", [
+  ("Giuseppe Scalarini – «Il santo manganello»", "Avanti!, 27 settembre 1924. Solo il manganello, pesante come una clava, insanguinato. È di pubblico dominio, ma l'unica copia digitale che ho trovato è minuscola.", "https://www.centrostudiustica.it/images/PDF/pdf-copertine-rivista-lettera/Lettera-N.36-37/L36-37_Conf_IpotiposiScalarini_Delfini.pdf"),
   ("David Low – archivio completo", "British Cartoon Archive, Università del Kent: «Hit and Muss», «Muzzler», «The Harmony Boys».", "https://archive.cartoons.ac.uk"),
-  ("Bernard Partridge – «The Broken Colossus»", "Punch, 1942. Mussolini Colosso di Rodi con la gamba africana spezzata.", "https://propaganda.pictures/archives/8564"),
-  ("John Heartfield – «Der Platz an der Sonne»", "AIZ, 10 ottobre 1935. Fotomontaggio sulla guerra d'Etiopia.", "https://heartfield.adk.de/en/node/3790"),
-  ("Disney – «Der Fuehrer's Face»", "1943. Paperino in Nutzi Land; Oscar per il miglior cortometraggio animato.", "https://en.wikipedia.org/wiki/Der_Fuehrer%27s_Face"),
  ]),
  ("Dal dopoguerra a oggi", "", [
   ("Gli anni del Male 1978–1982", "La mostra al WeGil di Roma sul settimanale satirico.", "https://www.finestresullarte.info/mostre/gli-anni-del-male-1978-1982-mostra-roma"),
   ("Altan e il 1994", "L'Espresso ricorda la vignetta sui «fasci al governo».", "https://lespresso.it/c/politica/2022/11/9/satira-a-che-punto-e-la-notte-parola-a-stefano-disegni-e-fabrizio-barca/38516"),
-  ("Fascisti su Marte", "Il film di Corrado Guzzanti (2006).", "https://it.wikipedia.org/wiki/Fascisti_su_Marte"),
   ("Mussolini ha fatto anche cose buone", "Il libro di Francesco Filippi (2019) e le «bufale» sul regime.", "https://www.ilfattoquotidiano.it/2019/04/25/25-aprile-le-bufale-del-fascismo-pensioni-bonifiche-case-stipendi-le-cose-buone-che-mussolini-non-ha-mai-fatto/5122512/"),
-  ("Nazi Punks Fuck Off", "Dead Kennedys, 1981, e la svastica barrata.", "https://en.wikipedia.org/wiki/Nazi_Punks_Fuck_Off"),
-  ("Are We the Baddies?", "Lo sketch di Mitchell e Webb (2006) diventato meme.", "https://en.wikipedia.org/wiki/Are_We_the_Baddies%3F"),
-  ("Il paradosso della tolleranza", "Il passo di Popper e il fumetto che lo ha reso virale.", "https://en.wikipedia.org/wiki/Paradox_of_tolerance"),
   ("«Nazis. I hate these guys.»", "Uno studio del 2025 su Indiana Jones come icona antifascista online.", "https://research.birmingham.ac.uk/en/publications/nazis-i-hate-these-guys-indiana-jones-as-an-antifascist-memetic-i/"),
   ("Fascists know how to turn mockery into power", "Foreign Policy, 2020: perché l'Hitler buffo dei meme non è per forza antifascista.", "https://foreignpolicy.com/2020/08/20/fascists-know-how-to-turn-mockery-into-power/"),
  ]),
