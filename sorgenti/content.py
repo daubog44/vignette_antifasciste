@@ -266,3 +266,21 @@ SOURCES = [
  ("Hinko Smrekar – Galleria nazionale di Slovenia", "https://smrekar.ng-slo.si/en/introduction/"),
  ("Heartfield Online – Akademie der Künste", "https://heartfield.adk.de/en/node/3790"),
 ]
+
+# Aggiunte: copertine di Simplicissimus e il cortometraggio del 1941 (pubblico dominio)
+_EXTRA = [
+ (22,    ("s01", "Adolf, ein verhinderter Diktator", "Erich Schilling", "22 aprile 1929", "Simplicissimus, Monaco, copertina", "", False)),
+ ("s01", ("s02", "Ergebnislose Haussuchung bei Hitler", "Thomas Theodor Heine", "1929", "Simplicissimus, Monaco", "", False)),
+ ("s02", ("s03", "Ordensverleihung", "Erich Schilling", "3 novembre 1930", "Simplicissimus, Monaco, copertina", "", False)),
+ ("s03", ("s04", "I topi di Goebbels", "Thomas Theodor Heine", "29 dicembre 1930", "Simplicissimus, Monaco", "", False)),
+ ("s04", ("s05", "Parteidisziplin", "Thomas Theodor Heine", "27 aprile 1931", "Simplicissimus, Monaco, copertina", "", True)),
+ (36,    ("s06", "Schichlegruber Doing the Lambeth Walk", "Charles A. Ridley", "dicembre 1941", "cortometraggio, Regno Unito", "", True)),
+]
+for _after, _t in _EXTRA:
+    for _c in CHAPTERS:
+        _ks = [f[0] for f in _c["figs"]]
+        if _after in _ks:
+            _c["figs"].insert(_ks.index(_after) + 1, _t)
+            break
+    else:
+        raise ValueError(_after)

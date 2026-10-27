@@ -399,3 +399,36 @@ T = {
  s="Il «punch a Nazi» è diventato un meme nel gennaio 2017, dopo il video di un esponente dell'alt-right colpito durante un'intervista; ha riportato in circolo i manifesti degli anni Quaranta.",
  a="Lettere bastone nere da adesivo in serie, illuminate da dentro: il verde trasforma uno slogan militante in un oggetto quasi decorativo."),
 }
+
+T.update({
+"s01": dict(
+ d="Hitler in uniforme bruna, a gambe e braccia divaricate, con una bomba a mano in ciascun pugno: il suo corpo disegna una svastica.",
+ i="Sotto, Hitler si lamenta: «Sarei bravo quanto Mussolini, ma le autorità non me lo permettono!». Nel 1929 il Duce è il modello, e Hitler un aspirante dittatore frustrato dalla burocrazia della Repubblica di Weimar.",
+ s="Simplicissimus era il più importante settimanale satirico tedesco, fondato a Monaco nel 1896. Nel 1929 il partito nazista era ancora piccolo: l'anno dopo sarebbe diventato il secondo partito del Reichstag. È la prima caricatura che fa del corpo intero di Hitler una svastica.",
+ a="Una sagoma piatta e scura su un fondo giallo pieno, senza ambiente: il corpo è ridotto a segno grafico, a logo. Schilling, che qui ride di Hitler, dopo il 1933 lavorò per il giornale ormai allineato al regime e si tolse la vita nel 1945."),
+"s02": dict(
+ d="Due poliziotti perquisiscono Hitler, seduto su una sedia: uno gli ha sollevato la calotta cranica come un coperchio e ci guarda dentro.",
+ i="«Perquisizione senza esito»: nella testa non c'è niente. E la frase sotto rincara: «Strano, con quanti pochi mezzi si possa fare tanto danno!».",
+ s="Thomas Theodor Heine, cofondatore di Simplicissimus ed ebreo, nel 1933 dovette fuggire: visse in esilio a Praga, Oslo e Stoccolma, dove morì nel 1948.",
+ a="Linea sottile e continua, quasi senza ombre, su carta chiara: la satira di Heine è fredda e precisa. Le scarpe da donna ai piedi di Hitler sono un dettaglio quasi invisibile, per chi guarda con attenzione."),
+"s03": dict(
+ d="Una fila di uomini delle SA in uniforme bruna, schierati sull'attenti, ricevono medaglie a forma di svastica.",
+ i="«I vincitori della battaglia di Wertheim vengono decorati con la Svastica di ferro di prima classe per il valoroso comportamento davanti al fronte delle vetrine». La parodia della Croce di ferro premia l'eroismo di chi ha preso a sassate dei negozi.",
+ s="Il 13 ottobre 1930, giorno di apertura del nuovo Reichstag dopo il successo elettorale nazista, le SA attraversarono il centro di Berlino sfasciando le vetrine del grande magazzino Wertheim e di altri negozi di proprietari ebrei.",
+ a="La ripetizione è il dispositivo: tanti corpi identici in fila, quasi senza volto, come un ornamento. Il linguaggio militare della didascalia fa il resto."),
+"s04": dict(
+ d="Una folla di topolini bianchi con la fascia della svastica sfila e si arrampica intorno agli stivali di un uomo in uniforme.",
+ i="I topi parlano da eroi: «Un film pacifista così scandaloso! Ma abbiamo mostrato ancora una volta che cos'è il vero eroismo». L'eroismo consisteva nel liberare topi in una sala cinematografica.",
+ s="Il 5 dicembre 1930, alla prima berlinese di All'ovest niente di nuovo, tratto da Remarque, gli uomini di Goebbels lanciarono bombe puzzolenti e liberarono topi bianchi in sala. Dopo una settimana di disordini, l'11 dicembre la censura vietò il film.",
+ a="Un disegno orizzontale quasi decorativo, con i topi in movimento continuo intorno al grande stivale. La sproporzione dice chi sono davvero i combattenti."),
+"s05": dict(
+ d="Hitler in uniforme cavalca un cavallo tagliato a metà: la metà davanti mangia alla mangiatoia, quella dietro non c'è più e dal taglio esce un fiotto di sangue.",
+ i="«E anche se metà del partito andasse al diavolo, finché alla mia metà resta la mangiatoia non mi può succedere niente». Il cavallo dimezzato viene dalle avventure del barone di Münchhausen: Hitler cavalca un partito spaccato, ma bada solo al foraggio.",
+ s="Con ogni probabilità si riferisce alla rivolta delle SA di Berlino guidata da Walther Stennes contro la direzione di Monaco, scoppiata all'inizio di aprile 1931 e chiusa da Hitler con l'espulsione dei ribelli.",
+ a="Rosso, nero e bianco su fondo crema: Heine usa i colori della bandiera nazista per la scena. La citazione di un classico illustrato per bambini rende il comando di Hitler una favola grottesca."),
+"s06": dict(
+ d="Il cartello d'apertura annuncia: «Schichlegruber doing the Lambeth Walk». Poi le immagini delle parate naziste.",
+ i="Le truppe che marciano a Norimberga, rimontate avanti e indietro, sembrano ballare la Lambeth Walk, una canzone da music hall londinese che un esponente nazista aveva liquidato come «saltellare animalesco». «Schichlegruber» storpia il cognome originario del padre di Hitler, Schicklgruber.",
+ s="Il montatore Charles A. Ridley, che lavorava per i cinegiornali Movietone, preparò il cortometraggio per il Ministero dell'Informazione britannico nel dicembre 1941; fu distribuito senza firma ai cinegiornali. Si racconta che Goebbels uscì infuriato dalla sala.",
+ a="Le immagini sono quelle del Trionfo della volontà di Leni Riefenstahl: la satira non aggiunge niente, rimonta. È uno dei primi mash-up della storia, settant'anni prima dei meme."),
+})

@@ -76,3 +76,46 @@ dict(
  s="Zerocalcare racconta di parlarne per esperienza diretta: a diciannove anni era stato picchiato. Il fumetto suscitò anche critiche, per esempio dal Foglio, che lo accusò di semplificare.",
  a="Il suo stile di sempre: disegno semplice e rotondo, tanto testo, il narratore che si rivolge al lettore. La satira passa per il tono colloquiale e l'autoironia."),
 ]
+
+PROT += [
+dict(
+ after=35, key="p-capamerica", file="captain-america-1-1941.jpg",
+ title="Captain America Comics n. 1", author="Joe Simon e Jack Kirby", date="20 dicembre 1940 (copertina datata marzo 1941)", pub="Timely Comics, New York",
+ link="https://en.wikipedia.org/wiki/Captain_America_Comics", where="Wikipedia (scheda della serie)",
+ d="Capitan America, in costume a stelle e strisce, irrompe in una stanza piena di nazisti e stende Hitler con un pugno in faccia.",
+ i="Un supereroe americano che picchia un capo di Stato con cui gli Stati Uniti non sono in guerra: un anno prima di Pearl Harbor, il fumetto fa quello che la politica non osa. Hitler, poi, nella storia all'interno non compare: il pugno è solo in copertina.",
+ s="Simon e Kirby erano figli di immigrati ebrei. Dopo l'uscita arrivarono minacce dai simpatizzanti nazisti americani, e il sindaco di New York Fiorello La Guardia telefonò alla redazione per garantire protezione. È da questa copertina che discende il «punch a Nazi» di oggi.",
+ a="La composizione esplode in diagonale da sinistra a destra, con il corpo del supereroe che attraversa tutta la scena. È la grammatica del fumetto d'azione americano, applicata per la prima volta alla cronaca politica."),
+dict(
+ after=38, key="p-kukryniksy", file="kukryniksy-1941.jpg",
+ title="Distruggeremo il nemico senza pietà!", author="Kukryniksy", date="giugno 1941", pub="manifesto, Mosca",
+ link="https://www.lambiek.net/artists/k/kukryniksy.htm", where="Lambiek Comiclopedia",
+ d="Hitler sfonda con la testa e con una mano artigliata il foglio del patto di non aggressione tra Germania e Unione Sovietica; davanti al suo muso c'è la baionetta di un soldato dell'Armata Rossa.",
+ i="Il patto firmato si rivela un pezzo di carta da strappare, e chi lo strappa si trova la baionetta in faccia. Hitler è disegnato piccolo e animalesco, l'esatto opposto del Führer della propaganda.",
+ s="Fu tra i primi manifesti stampati dopo l'invasione tedesca del 22 giugno 1941. I Kukryniksy erano tre artisti, Kuprijanov, Krylov e Sokolov, che firmavano con un nome solo e diventarono i caricaturisti più famosi dell'Unione Sovietica in guerra.",
+ a="Un'immagine da manifesto di strada: poche figure, colori pieni, la diagonale della baionetta che attraversa il foglio. Il lavoro in tre mani produceva uno stile unico e riconoscibile."),
+dict(
+ after=57, key="p-efimov", file="efimov-1944.jpg",
+ title="Il solito piatto al quartier generale di Hitler", author="Boris Efimov", date="1944", pub="Ogonëk, Mosca",
+ link="https://www.blavatnikarchive.org/collection/46", where="Blavatnik Archive",
+ d="Grandi baionette rosse infilzano una pentola piena di soldati tedeschi che si arrendono con una bandiera bianca: «Hitler kaputt». Un pentolone nero schiaccia il tavolo a cui siedono Hitler, Goebbels e Göring, che volano per aria.",
+ i="Il «piatto del giorno» del quartier generale nazista sono le proprie truppe che si arrendono: la cucina del potere serve sempre la stessa sconfitta.",
+ s="Nel 1944 l'Armata Rossa stava ricacciando la Wehrmacht dal territorio sovietico. Efimov, ebreo di Kiev, disegnava quasi ogni giorno; si diceva che Hitler lo avesse messo nella lista delle persone da eliminare dopo la presa di Mosca. Nel 1945–46 andò a Norimberga a disegnare gli imputati. Morì nel 2008, a 108 anni.",
+ a="Una scena affollata e dinamica, costruita su grandi oggetti simbolici, baionette e pentole, che schiacciano figure piccole. Il grottesco viene dalle proporzioni."),
+dict(
+ after=57, key="p-cantachiaro", file="cantachiaro-1944.jpg",
+ title="Il discorso del Duce, annotato", author="Cantachiaro, diretto da Franco Monicelli", date="dicembre 1944", pub="Cantachiaro, Roma",
+ link="https://en.wikipedia.org/wiki/Cantachiaro", where="Wikipedia (Cantachiaro)",
+ d="Il settimanale ripubblica per intero il discorso tenuto da Mussolini a Milano due settimane prima, con titoli e commenti che lo chiamano «delirante» e «un Nerone che ha suonato la lira mentre l'Italia bruciava».",
+ i="La satira più semplice: lasciar parlare il Duce. Pubblicato senza tagli e con le note a margine, il discorso doveva bastare da solo a mostrarne l'assurdità.",
+ s="Cantachiaro nacque a Roma subito dopo la Liberazione, nel 1944. L'operazione non fu capita: L'Unità la denunciò come propaganda fascista, squadre di militanti ritirarono le copie dalle edicole, e la Commissione nazionale per la stampa sospese il giornale per una settimana. Fu il primo caso di libertà di stampa nell'Italia liberata.",
+ a="È satira di montaggio più che di disegno: titolazione, impaginazione e commento trasformano un documento in una parodia."),
+dict(
+ after="svg", key="p-producers", file="producers-1967.jpg",
+ title="The Producers – «Springtime for Hitler»", author="Mel Brooks", date="1967", pub="film",
+ link="https://en.wikipedia.org/wiki/The_Producers_(1967_film)", where="Wikipedia (scheda del film)",
+ d="Due impresari di Broadway mettono in scena «Primavera per Hitler», un musical con ballerine, svastiche e coro di SA, sicuri che sarà il fiasco più clamoroso della storia.",
+ i="Vogliono un fiasco per intascare i soldi dei finanziatori, ma il pubblico, dopo lo shock iniziale, lo trova irresistibilmente ridicolo e lo trasforma in un successo. Hitler non regge allo spettacolo: diventa un numero da varietà.",
+ s="Brooks, ebreo e veterano della Seconda guerra mondiale, ha spiegato più volte che contro i dittatori la retorica non vince, il ridicolo sì. Il film vinse l'Oscar per la sceneggiatura originale.",
+ a="Il numero musicale imita alla perfezione lo sfarzo di Broadway: coreografie dall'alto, costumi luccicanti, svastiche composte dalle ballerine. La satira sta nella perfezione della forma applicata al soggetto sbagliato."),
+]

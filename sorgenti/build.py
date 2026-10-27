@@ -16,7 +16,7 @@ def src(idx):
     k = str(idx)
     if idx == "svg":
         return "img/frecce.svg", tuple(S[k][0])
-    if k.startswith("m"):
+    if k.startswith("m") or (k.startswith("s") and k != "svg"):
         ext = "svg" if k == "m02" else "jpg"
         return f"img/{k}.{ext}", tuple(S[k][0])
     return f"img/{idx:02d}.jpg", tuple(S[k][0])
