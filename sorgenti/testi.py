@@ -432,3 +432,9 @@ T.update({
  s="Il montatore Charles A. Ridley, che lavorava per i cinegiornali Movietone, preparò il cortometraggio per il Ministero dell'Informazione britannico nel dicembre 1941; fu distribuito senza firma ai cinegiornali. Si racconta che Goebbels uscì infuriato dalla sala.",
  a="Le immagini sono quelle del Trionfo della volontà di Leni Riefenstahl: la satira non aggiunge niente, rimonta. È uno dei primi mash-up della storia, settant'anni prima dei meme."),
 })
+
+T["s07"] = dict(
+ d="Un gigante con l'elmo chiodato prussiano, il cappotto grigio con la svastica e un teschio al posto della faccia. Dietro di lui, piccoli, un generale spagnolo carico di medaglie, un capitalista e un prete gli reggono il mantello.",
+ i="Il titolo è quello che Franco si era dato: «Generalísimo». Ma il generalissimo vero è la morte in divisa tedesca, e l'esercito, il denaro e la Chiesa spagnoli sono soltanto i paggi che le portano lo strascico.",
+ s="Lo pubblicò la Giunta di difesa di Madrid durante l'assedio della città, nel 1936–37. La Germania nazista e l'Italia fascista sostenevano Franco con aerei, armi e truppe: pochi mesi dopo la Legione Condor tedesca avrebbe bombardato Guernica.",
+ a="Grafica modernista da manifesto: figure geometriche, colori piatti, la sproporzione di scala come argomento politico. Il rosso del mantello è l'unico colore caldo e lega il gigante ai suoi portatori.")

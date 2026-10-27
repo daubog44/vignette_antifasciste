@@ -119,3 +119,98 @@ dict(
  s="Brooks, ebreo e veterano della Seconda guerra mondiale, ha spiegato più volte che contro i dittatori la retorica non vince, il ridicolo sì. Il film vinse l'Oscar per la sceneggiatura originale.",
  a="Il numero musicale imita alla perfezione lo sfarzo di Broadway: coreografie dall'alto, costumi luccicanti, svastiche composte dalle ballerine. La satira sta nella perfezione della forma applicata al soggetto sbagliato."),
 ]
+
+def _P(after, key, file, title, author, date, pub, link, where, d, i, s, a):
+    return dict(after=after, key=key, file=file, title=title, author=author, date=date, pub=pub, link=link, where=where, d=d, i=i, s=s, a=a)
+
+_NEW = [
+_P(13, "p-beccogiallo-parigi", "becco-giallo-parigi-1927.jpg",
+ "Il Becco Giallo in esilio", "Alberto Giannini e Alberto Cianca", "1927–1931", "Parigi",
+ "https://en.wikipedia.org/wiki/Il_Becco_Giallo", "Wikipedia (Il Becco Giallo)",
+ "Il settimanale chiuso dalle leggi fascistissime rinasce a Parigi, con la stessa testata e il merlo dal becco giallo, e si fa arrivare clandestinamente in Italia.",
+ "L'ironia, stavolta, è nella storia del suo fondatore. Giannini, l'uomo a cui i fascisti avevano bruciato le copie e assaltato la casa, nel 1934 fondò Il Merlo, tacciato di filofascismo; Salvemini scrisse di lui che era «passato al nemico».",
+ "Nell'agosto 1927 la nuova serie nacque d'accordo con la Concentrazione antifascista, l'alleanza dei partiti in esilio. Cianca, già direttore del Becco Giallo a Roma, a Parigi pubblicò con Carlo Rosselli anche il settimanale Giustizia e Libertà.",
+ "La satira dell'esilio parla a due pubblici: i fuorusciti, che conoscono tutti i retroscena, e i lettori clandestini in Italia, che rischiano la galera per averla in tasca."),
+_P(35, "p-brecht", "brecht-arturo-ui.jpg",
+ "La resistibile ascesa di Arturo Ui", "Bertolt Brecht", "scritto nel 1941, in scena dal 1958", "teatro",
+ "https://it.wikipedia.org/wiki/La_resistibile_ascesa_di_Arturo_Ui", "Wikipedia (scheda dell'opera)",
+ "Un gangster di Chicago, Arturo Ui, si impadronisce del racket dei cavolfiori con l'intimidazione, la corruzione e l'omicidio. Ogni scena ricalca un momento dell'ascesa di Hitler, dai finanziatori all'incendio del Reichstag all'annessione dell'Austria.",
+ "Hitler non è un demone ma un piccolo criminale, che prende lezioni di portamento da un attore di provincia. E la parola chiave è nel titolo: l'ascesa era resistibile, chi la lasciò accadere ha delle colpe. Nell'epilogo Brecht avverte che il grembo che l'ha generato è ancora fecondo.",
+ "Brecht la scrisse in poche settimane in Finlandia, nel 1941, in attesa del visto per gli Stati Uniti. Fu messa in scena solo dopo la sua morte, a Stoccarda nel 1958; i personaggi ricalcano Hitler, Göring, Goebbels, Röhm.",
+ "Il teatro epico di Brecht: cartelli che ricordano allo spettatore i fatti storici, versi in pentametri giambici come nei drammi di Shakespeare, applicati a un gangster. Lo straniamento impedisce di immedesimarsi e obbliga a giudicare."),
+_P(49, "p-lubitsch", "lubitsch-vogliamo-vivere-1942.jpg",
+ "Vogliamo vivere! (To Be or Not to Be)", "Ernst Lubitsch", "1942", "film",
+ "https://en.wikipedia.org/wiki/To_Be_or_Not_to_Be_(1942_film)", "Wikipedia (scheda del film)",
+ "Una compagnia di attori della Varsavia occupata, guidata dal vanitoso Joseph Tura, si traveste da ufficiali nazisti per salvare la Resistenza polacca da una spia.",
+ "Gli attori fanno i nazisti meglio dei nazisti, perché il nazismo è già una recita: uniformi, saluti, formule. Il colonnello della Gestapo ripete compiaciuto il proprio soprannome, «Campo di concentramento Ehrhardt».",
+ "Uscì nel 1942, poche settimane dopo la morte della protagonista Carole Lombard in un incidente aereo. All'epoca molti lo trovarono di cattivo gusto: ridere dei nazisti mentre occupavano la Polonia sembrava inaccettabile. Oggi è considerato un capolavoro.",
+ "La commedia sofisticata di Lubitsch, fatta di porte, equivoci e battute ripetute, applicata alla guerra: il ritmo comico non si interrompe mai, ed è questo a rendere più feroce la satira."),
+_P("svg", "p-federale", "il-federale-1961.jpg",
+ "Il federale", "Luciano Salce", "1961", "film",
+ "https://it.wikipedia.org/wiki/Il_federale", "Wikipedia (scheda del film)",
+ "Nella primavera del 1944 il milite fascista Primo Arcovazzi, Ugo Tognazzi, deve scortare a Roma un anziano filosofo antifascista, per ottenere in premio la nomina a federale.",
+ "Il viaggio attraverso l'Italia in rovina mostra un fascista che crede ancora nel regime quando il regime non esiste più. La promozione arriva quando il regime è ormai crollato: l'uniforme nuova diventa un costume fuori tempo.",
+ "È uno dei primi film italiani a ridere del fascismo dall'interno, nel pieno della commedia all'italiana.",
+ "La forma del film di viaggio, a due, con il contrasto di caratteri tra il milite ottuso e il professore: la satira nasce dalla convivenza forzata."),
+_P("svg", "p-marcia", "la-marcia-su-roma-1962.jpg",
+ "La marcia su Roma", "Dino Risi", "1962", "film",
+ "https://it.wikipedia.org/wiki/La_marcia_su_Roma_(film)", "Wikipedia (scheda del film)",
+ "Due poveracci, un reduce senza lavoro e un contadino, Vittorio Gassman e Ugo Tognazzi, si aggregano alla marcia su Roma del 1922.",
+ "Durante la marcia controllano il programma fascista del 1919 e ne cancellano i punti uno alla volta, man mano che vedono il movimento tradirli. Arrivati a Roma, il programma è tutto cancellato.",
+ "Risi racconta la presa del potere dal basso, con gli occhi di chi ci credeva per fame e per disperazione, non per ideologia.",
+ "La commedia all'italiana, con i suoi personaggi mediocri e simpatici, usata per raccontare una tragedia nazionale. Il programma cancellato è un dispositivo semplice e potentissimo."),
+_P("svg", "p-amarcord", "amarcord-1973.jpg",
+ "Amarcord", "Federico Fellini", "1973", "film",
+ "https://it.wikipedia.org/wiki/Amarcord", "Wikipedia (scheda del film)",
+ "La Rimini degli anni Trenta ricordata da Fellini. Il 21 aprile, Natale di Roma, la città sfila in uniforme, e un ragazzo sogna di sposare la sua amata davanti a un enorme volto del Duce fatto di fiori.",
+ "Il fascismo come provincia adolescente: parate, ginnastica, divise, desiderio. Ma la stessa sera il padre del protagonista, sospettato di antifascismo, viene costretto a bere l'olio di ricino.",
+ "Vinse l'Oscar per il miglior film straniero. Il titolo in romagnolo significa «mi ricordo».",
+ "Il grottesco visionario di Fellini: la testa di fiori del Duce che parla è un'immagine onirica, dove l'adorazione collettiva diventa un carro di carnevale."),
+_P("svg", "p-colonnelli", "vogliamo-i-colonnelli-1973.jpg",
+ "Vogliamo i colonnelli", "Mario Monicelli", "1973", "film",
+ "https://it.wikipedia.org/wiki/Vogliamo_i_colonnelli", "Wikipedia (scheda del film)",
+ "Un deputato di estrema destra, l'onorevole Tritoni, Ugo Tognazzi, organizza con militari e nostalgici un colpo di Stato nell'Italia degli anni Settanta.",
+ "Il golpe è un'impresa da dilettanti, piena di errori e di vanità; eppure il film non è rassicurante, perché il pericolo non sta solo nei golpisti maldestri ma in chi è pronto a sfruttarli.",
+ "Il film nasce dal tentato colpo di Stato di Junio Valerio Borghese del dicembre 1970 e dal timore di una svolta autoritaria come quella dei colonnelli in Grecia, al potere dal 1967.",
+ "Monicelli porta la commedia all'italiana nella cronaca politica contemporanea, con un ritmo da farsa che rende i golpisti ridicoli senza renderli innocui."),
+_P("m07", "p-luietornato", "lui-e-tornato-2015.jpg",
+ "Lui è tornato", "David Wnendt, dal romanzo di Timur Vermes", "2015", "film, Germania",
+ "https://en.wikipedia.org/wiki/Look_Who%27s_Back_(film)", "Wikipedia (scheda del film)",
+ "Hitler si risveglia nella Berlino di oggi. Tutti lo scambiano per un comico che non esce mai dal personaggio, e diventa una star della televisione.",
+ "La gente ride di lui e con lui, e intanto gli dà ragione. Molte scene sono girate per strada con persone vere, che parlano all'attore travestito da Hitler: la satira registra le loro risposte.",
+ "Il romanzo di Vermes del 2012 fu un caso editoriale in Germania. Il film ha avuto un remake italiano, Sono tornato.",
+ "Un ibrido tra finzione e candid camera: la telecamera nascosta trasforma il pubblico in parte del bersaglio."),
+_P("m07", "p-sonotornato", "sono-tornato-2018.jpg",
+ "Sono tornato", "Luca Miniero", "2018", "film",
+ "https://it.wikipedia.org/wiki/Sono_tornato", "Wikipedia (scheda del film)",
+ "Mussolini, Massimo Popolizio, ricompare a piazza Vittorio a Roma. Un videomaker lo crede un comico e lo porta in giro per l'Italia a girare un documentario.",
+ "Il Duce trova un paese già pronto ad ascoltarlo, tra televisione e social. Lui stesso lo riassume: governare gli italiani non è difficile, è impossibile.",
+ "È il remake di Lui è tornato, uscito il 1° febbraio 2018, un mese prima delle elezioni politiche. Come nell'originale, alcune scene sono girate con passanti veri. Il regista ha detto che il rapporto degli italiani con Mussolini è più indulgente di quello dei tedeschi con Hitler.",
+ "Popolizio, attore di teatro, ha scelto di non fare una macchietta: è l'aderenza al personaggio a far ridere, e a mettere a disagio."),
+_P("m17", "p-jojo", "jojo-rabbit-2019.jpg",
+ "Jojo Rabbit", "Taika Waititi", "2019", "film",
+ "https://en.wikipedia.org/wiki/Jojo_Rabbit", "Wikipedia (scheda del film)",
+ "Jojo, un bambino della Hitlerjugend nella Germania del 1945, ha come amico immaginario Hitler in persona: un Hitler infantile, goffo e isterico, interpretato dal regista.",
+ "Hitler visto con gli occhi di un bambino di dieci anni è esattamente quello che è: un adulto ridicolo che parla come un bambino. Il film ride dell'indottrinamento, finché Jojo scopre che sua madre nasconde in casa una ragazza ebrea.",
+ "Waititi, di padre maori e madre di origine ebraica russa, ha scelto di interpretare lui stesso Hitler. Il film ha vinto l'Oscar per la sceneggiatura non originale.",
+ "Colori pastello, simmetrie e ritmo da fiaba, nella scia di Wes Anderson: la forma rassicurante rende più netto il passaggio alla tragedia."),
+_P(61, "p-mfiglio", "m-il-figlio-del-secolo-2025.jpg",
+ "M. Il figlio del secolo", "Joe Wright, dal romanzo di Antonio Scurati", "2025", "serie TV",
+ "https://en.wikipedia.org/wiki/M._Son_of_the_Century", "Wikipedia (scheda della serie)",
+ "L'ascesa di Mussolini dal 1919 al 1925, interpretato da Luca Marinelli, che parla spesso direttamente alla telecamera.",
+ "Non è una commedia, ma usa il grottesco: Mussolini si rivolge al pubblico come un imbonitore, e lo rende complice. Lo spettatore si scopre sedotto, ed è proprio questo il punto.",
+ "Tratta dal romanzo con cui Scurati vinse il premio Strega nel 2019, è stata presentata alla Mostra di Venezia nel 2024 e trasmessa all'inizio del 2025.",
+ "Regia espressionista, colonna sonora elettronica, rottura della quarta parete: il linguaggio della propaganda di oggi applicato alla propaganda di ieri."),
+]
+
+def _insert(new):
+    # mantiene l'ordine cronologico dentro lo stesso punto di inserimento
+    order = {"p-federale": "p-producers", "p-marcia": "p-producers", "p-luietornato": "p-zerocalcare", "p-sonotornato": "p-zerocalcare"}
+    for e in new:
+        k = order.get(e["key"])
+        if k:
+            idx = [q["key"] for q in PROT].index(k)
+            PROT.insert(idx, e)
+        else:
+            PROT.append(e)
+_insert(_NEW)

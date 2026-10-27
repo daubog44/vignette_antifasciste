@@ -249,6 +249,7 @@ LINKS = [
 
 NOTE = [
  "In rete circolano come «classici» alcune vignette che non sono riuscito a trovare in archivi verificabili: una copertina del Becco Giallo con Mussolini seduto sulla bara di Matteotti, una vignetta di Punch del novembre 1922 con Mussolini centurione all'ingresso a Roma, caricature di Scalarini del 1920–21 con Mussolini voltagabbana. Per questo qui non compaiono. Scalarini, in particolare, ritrasse Mussolini pochissime volte: il direttore dell'Avanti! Serrati aveva dato ordine di ignorare l'ex direttore.",
+ "Manca ancora la satira della Resistenza (1943–45): la stampa clandestina contava migliaia di fogli, ma non ho trovato vignette satiriche precise, datate e consultabili online da poter descrivere senza inventare. È il prossimo buco da colmare, negli archivi degli Istituti storici della Resistenza.",
  "Date e autori seguono le schede di Wikimedia Commons e degli archivi che conservano gli originali; dove le fonti non concordano è indicato. Le traduzioni delle didascalie straniere sono mie.",
 ]
 
@@ -274,6 +275,7 @@ _EXTRA = [
  ("s02", ("s03", "Ordensverleihung", "Erich Schilling", "3 novembre 1930", "Simplicissimus, Monaco, copertina", "", False)),
  ("s03", ("s04", "I topi di Goebbels", "Thomas Theodor Heine", "29 dicembre 1930", "Simplicissimus, Monaco", "", False)),
  ("s04", ("s05", "Parteidisziplin", "Thomas Theodor Heine", "27 aprile 1931", "Simplicissimus, Monaco, copertina", "", True)),
+ (24,    ("s07", "El generalísimo", "Pedrero", "1936–37", "manifesto, Giunta di difesa di Madrid", "", True)),
  (36,    ("s06", "Schichlegruber Doing the Lambeth Walk", "Charles A. Ridley", "dicembre 1941", "cortometraggio, Regno Unito", "", True)),
 ]
 for _after, _t in _EXTRA:
