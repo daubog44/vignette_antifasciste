@@ -2,8 +2,7 @@
 # Versione a scorrimento continuo: tutte le immagini grandi, una dopo l'altra, senza schede né caroselli.
 import json, html, importlib
 import content as C
-from storie import STORIA
-from arte import ARTE
+from testi import T as TX
 importlib.reload(C)
 
 import os
@@ -74,10 +73,9 @@ figcaption h3{font-family:var(--display); font-weight:700; font-size:clamp(25px,
 .meta{font-family:var(--label); font-size:13.5px; letter-spacing:.04em; color:var(--muted); margin:0 0 10px}
 .star{display:inline-block; background:var(--accent); color:#16130f; font-weight:700; padding:0 6px; margin-right:6px; letter-spacing:.08em; text-transform:uppercase; font-size:11px}
 figcaption p{margin:0}
-.lab{display:block; font-family:var(--label); text-transform:uppercase; letter-spacing:.14em; font-size:11.5px; font-weight:700; color:var(--muted); margin:0 0 3px}
-.cap{font-size:1.02em}
-.story{margin-top:16px !important; padding:12px 0 0 14px; border-left:3px solid var(--accent)}
-.story.art{border-left-color:var(--ink)}
+.lab{display:block; font-family:var(--label); text-transform:uppercase; letter-spacing:.14em; font-size:11px; font-weight:700; color:var(--muted); margin:0 0 2px}
+.blk{margin-top:14px !important}
+.blk.iro{padding-left:12px; border-left:3px solid var(--accent)}
 
 /* Coda */
 .tail{padding-top:70px}
@@ -125,7 +123,7 @@ footer{margin-top:60px; padding:24px 0 56px; border-top:3px double var(--ink)}
 .vw-info .in{max-width:700px; margin:0 auto}
 .vw-info h3{font-family:var(--display); font-size:26px; line-height:1.1; margin:0 0 4px}
 .vw-info .meta, .vw-info .lab, .vw-info .num{color:#a39c8e}
-.vw-info .story{border-left-color:#f0bd2a} .vw-info .story.art{border-left-color:#efe9dc}
+.vw-info .blk.iro{border-left-color:#f0bd2a}
 .vw-strip{display:flex; gap:6px; overflow-x:auto; padding:8px 10px; padding-bottom:calc(8px + env(safe-area-inset-bottom)); border-top:1px solid #2a2620; scrollbar-width:thin; -webkit-overflow-scrolling:touch}
 #vw .vw-strip button{flex:none; height:58px; min-width:0; padding:0; border-radius:3px; overflow:hidden; opacity:.45; outline:2px solid transparent; outline-offset:1px; background:#222}
 #vw .vw-strip button.on{opacity:1; outline-color:#f0bd2a}
@@ -161,7 +159,7 @@ def build():
             load = "eager" if n < 2 else "lazy"
             o.append(f'<figure class="plate"><div class="stage"><button type="button" data-g="{n}" aria-label="Apri a schermo intero: {esc(title)}">'
                      f'<img src="{s}" width="{w}" height="{h}" loading="{load}" decoding="async" alt="{esc(title)} – {esc(author)}{(", " + esc(date)) if date else ""}"></button><p class="zoomhint">Tocca per ingrandire</p></div>'
-                     f'<figcaption><span class="num">{n+1:02d} / {len(ALL)}</span><h3>{esc(title)}</h3><p class="meta">{star}{esc(meta)}</p><p class="cap"><span class="lab">Didascalia</span>{esc(text)}</p><p class="story"><span class="lab">La storia</span>{esc(STORIA[idx])}</p><p class="story art"><span class="lab">Lettura artistica</span>{esc(ARTE[idx])}</p></figcaption></figure>')
+                     f'<figcaption><span class="num">{n+1:02d} / {len(ALL)}</span><h3>{esc(title)}</h3><p class="meta">{star}{esc(meta)}</p><p class="blk"><span class="lab">Cosa si vede</span>{esc(TX[idx]['d'])}</p><p class="blk iro"><span class="lab">{esc(TX[idx].get('il', "L'ironia"))}</span>{esc(TX[idx]['i'])}</p><p class="blk"><span class="lab">Il contesto</span>{esc(TX[idx]['s'])}</p><p class="blk"><span class="lab">Il segno</span>{esc(TX[idx]['a'])}</p></figcaption></figure>')
             n += 1
     o.append('<div class="wrap tail" id="altro"><h2>Le vignette che mancano</h2>')
     for title, intro, items in C.LINKS:

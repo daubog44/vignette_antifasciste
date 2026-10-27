@@ -36,7 +36,7 @@ CHAPTERS = [
  dict(id="governo", num="II", years="1922–1924", title="Il Duce al governo",
   text=[
    "I primi due anni di governo sono ancora formalmente parlamentari: la stampa d'opposizione esce, i giornali satirici pure. Mussolini governa con ministri liberali e popolari, fa approvare una legge elettorale maggioritaria (la legge Acerbo, 1923) e intanto prova la mano in politica estera.",
-   "Nell'agosto 1923 il generale Tellini viene ucciso al confine tra Grecia e Albania; Mussolini risponde bombardando e occupando l'isola di Corfù e rifiutando la mediazione della Società delle Nazioni. È la prima volta che la stampa straniera disegna il Duce come un attaccabrighe con la sciabola (vedi il capitolo V). In Italia la satira prende di mira soprattutto l'opportunismo: la corsa di notabili, ex liberali e affaristi a dichiararsi fascisti «della prima ora».",
+   "Nell'agosto 1923 il generale Tellini viene ucciso al confine tra Grecia e Albania; Mussolini risponde bombardando e occupando l'isola di Corfù e rifiutando la mediazione della Società delle Nazioni. È la prima volta che la stampa straniera disegna il Duce come un attaccabrighe con la sciabola. In Italia la satira prende di mira soprattutto l'opportunismo: la corsa di notabili, ex liberali e affaristi a dichiararsi fascisti «della prima ora».",
   ],
   figs=[
    (3, "Il Teatro Nazionale delle Teste di legno", "Umberto Tirelli", "1923", "manifesto satirico",

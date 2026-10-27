@@ -2,7 +2,7 @@
 
 **Satira contro il fascismo. Cent'anni di vignette contro il Duce, dall'Avanti! ai meme.**
 
-Un excursus storico in una sola pagina web: 77 immagini dal 1914 a oggi, ognuna con didascalia, storia e lettura artistica. Si legge scorrendo, oppure si sfoglia in carosello con zoom (pizzico, doppio tocco, rotella).
+Un excursus storico in una sola pagina web: 77 immagini dal 1914 a oggi, ognuna con quattro note brevi: cosa si vede, dove sta l'ironia, il contesto, il segno. Si legge scorrendo, oppure si sfoglia in carosello con zoom (pizzico, doppio tocco, rotella).
 
 ## Contenuto
 
@@ -15,7 +15,7 @@ Un excursus storico in una sola pagina web: 77 immagini dal 1914 a oggi, ognuna 
 
 ## Rigenerare la pagina
 
-I testi stanno in `sorgenti/content.py` (titoli, didascalie, capitoli), `sorgenti/storie.py` («La storia») e `sorgenti/arte.py` («Lettura artistica»). Dopo una modifica:
+I testi stanno in due file: `sorgenti/content.py` (titoli, date, capitoli, collegamenti) e `sorgenti/testi.py` (per ogni immagine: cosa si vede, l'ironia, il contesto, il segno). Dopo una modifica:
 
 ```sh
 python3 sorgenti/build.py
