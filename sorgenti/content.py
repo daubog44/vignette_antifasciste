@@ -82,7 +82,7 @@ CHAPTERS = [
  dict(id="estero", num="V", years="1922–1939", title="Il mondo ride del Duce",
   text=[
    "Messa a tacere in Italia, la satira su Mussolini emigra. Per tutti gli anni Venti e Trenta il Duce è uno dei personaggi più disegnati del mondo: la mascella, il mento in avanti, la posa marziale e il cranio lucido diventano una sigla riconoscibile da Madrid a Shanghai.",
-   "In Spagna Luis Bagaría lo ridicolizza sul quotidiano El Sol in un italiano maccheronico inventato. A Londra David Low, sull'Evening Standard, lo disegna prima come Cesare da operetta e poi come comprimario di Hitler; i suoi lavori vengono vietati in Italia e in Germania (sono ancora protetti da diritto d'autore: qui trovi le loro schede, con il collegamento agli originali). Da Praga John Heartfield dedica fotomontaggi alla guerra d'Etiopia. Negli Stati Uniti Clifford Berryman lo segue per tutto il decennio. Persino la stampa egiziana, allora sotto forte influenza britannica, ne fa un bersaglio fisso.",
+   "In Spagna Luis Bagaría lo ridicolizza sul quotidiano El Sol in un italiano maccheronico inventato. A Londra David Low, sull'Evening Standard, lo disegna prima come Cesare da operetta e poi come comprimario di Hitler; i suoi lavori vengono vietati in Italia e in Germania. Qui sono riprodotte alcune opere di Low, con le fonti collegate. Da Praga John Heartfield dedica fotomontaggi alla guerra d'Etiopia. Negli Stati Uniti Clifford Berryman lo segue per tutto il decennio. Persino la stampa egiziana, allora sotto forte influenza britannica, ne fa un bersaglio fisso.",
    "Il filo è quello della politica estera fascista: Corfù (1923), la guerra d'Etiopia con l'uso dei gas (1935–36), l'Asse Roma-Berlino (1936), l'Anschluss dell'Austria (marzo 1938), le rivendicazioni su Nizza, Corsica, Tunisi e Gibuti (novembre 1938), l'invasione dell'Albania (aprile 1939).",
   ],
   figs=[
@@ -234,8 +234,8 @@ CHAPTERS = [
 ]
 
 LINKS = [
- ("Altre opere da vedere", "Opere che non hanno una scheda qui: di alcune esiste solo una copia a bassissima risoluzione, altre sono raccolte negli archivi.", [
-  ("Giuseppe Scalarini – «Il santo manganello»", "Avanti!, 27 settembre 1924. Solo il manganello, pesante come una clava, insanguinato. È di pubblico dominio, ma l'unica copia digitale che ho trovato è minuscola.", "https://www.centrostudiustica.it/images/PDF/pdf-copertine-rivista-lettera/Lettera-N.36-37/L36-37_Conf_IpotiposiScalarini_Delfini.pdf"),
+ ("Archivi e raccolte", "Fonti e percorsi per continuare la lettura, oltre alle opere riprodotte nella pagina.", [
+  ("Giuseppe Scalarini – le ipotiposi storiche", "Il saggio di Giovanna Delfini sui disegni di Scalarini. Il bastone tarlato del 27 settembre 1924 è riprodotto nella pagina dalla copia dell'Avanti! conservata dal Senato.", "https://www.centrostudiustica.it/images/PDF/pdf-copertine-rivista-lettera/Lettera-N.36-37/L36-37_Conf_IpotiposiScalarini_Delfini.pdf"),
   ("David Low – archivio completo", "British Cartoon Archive, Università del Kent: «Hit and Muss», «Muzzler», «The Harmony Boys».", "https://archive.cartoons.ac.uk"),
  ]),
  ("Dal dopoguerra a oggi", "", [
@@ -248,8 +248,8 @@ LINKS = [
 ]
 
 NOTE = [
- "In rete circolano come «classici» alcune vignette che non sono riuscito a trovare in archivi verificabili: una copertina del Becco Giallo con Mussolini seduto sulla bara di Matteotti, una vignetta di Punch del novembre 1922 con Mussolini centurione all'ingresso a Roma, caricature di Scalarini del 1920–21 con Mussolini voltagabbana. Per questo qui non compaiono. Scalarini, in particolare, ritrasse Mussolini pochissime volte: il direttore dell'Avanti! Serrati aveva dato ordine di ignorare l'ex direttore.",
- "Della satira della Resistenza (1943–45) qui c'è soprattutto quella cantata, come la Badoglieide: la stampa clandestina contava migliaia di fogli, ma non ho trovato vignette satiriche precise, datate e consultabili online da poter descrivere senza inventare. È il prossimo buco da colmare, negli archivi degli Istituti storici della Resistenza.",
+ "Le riproduzioni successive conservano la distinzione fra la data dell'opera e quella della copia mostrata. La vignetta con Mussolini seduto sulla bara di Matteotti viene dalla ripresa su l'Unità del 21 maggio 1994, che la attribuisce a Chancel e al Becco Giallo clandestino; il fascicolo originario resta da identificare.",
+ "La satira della Resistenza comprende la Badoglieide, Cantachiaro del 21 ottobre 1944 e Il Cacasenno del 31 ottobre 1944, giornale partigiano della 2ª Divisione alpina Giustizia e Libertà. Le riproduzioni provengono dagli archivi indicati nelle schede. Per le incisioni di Olivucci il corpus è datato 1938–1948, mentre la singola tavola riprodotta non ha una data accertata.",
  "Date e autori seguono le schede di Wikimedia Commons e degli archivi che conservano gli originali; dove le fonti non concordano è indicato. Le traduzioni delle didascalie straniere sono mie.",
 ]
 

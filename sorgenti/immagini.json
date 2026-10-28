@@ -1243,5 +1243,50 @@
     ],
     "rights": "Documento editoriale della Direzione generale per gli Archivi; condizioni di riuso da verificare nella fonte",
     "verification": "Documento di contesto identificato; il rapporto con la satira è precisato nella scheda"
+  },
+  "p-altan-fascismo": {
+    "page": "https://www.editorialedomani.it/idee/cultura/altan-intervista-autore-cover-finzioni-tempi-sempre-stessi-p3jfjvd2",
+    "image": "https://immagini.editorialedomani.it/version/c%3AODY0OWU0YjEtZTc2Yi00%3AMzNiNzgzYmYtZTE4YS00/image.webp?f=3%3A2&q=0.75&w=1920",
+    "note": "Vignetta di Altan dalla raccolta Fianco-dest! (Gallucci, 2025), riprodotta da Domani il 16 gennaio 2026; prima pubblicazione non precisata.",
+    "size": [
+      759,
+      506
+    ],
+    "thumb_size": [
+      420,
+      280
+    ],
+    "rights": "© Altan / titolari dell’opera; riproduzione pubblica Domani, diritti riservati",
+    "verification": "Vignetta, autore, raccolta del 2025 e riproduzione del 16 gennaio 2026 verificati nella fonte editoriale. Prima pubblicazione non precisata."
+  },
+  "p-gl-esilio": {
+    "page": "https://www.bibliotecaginobianco.it/flip/LIB/LIB05-0100/",
+    "image": "https://www.bibliotecaginobianco.it/flip/LIB/LIB05-0100/files/assets/common/page-html5-substrates/page0001_4.jpg?uni=b5597d144be270695fd5b017bb77e2ae",
+    "note": "La Libertà, giornale della Concentrazione antifascista, anno V, n. 1, Parigi, 1 gennaio 1931, prima pagina integrale. In basso a destra la vignetta «Il Papa — I patti... i patti...»; Biblioteca Gino Bianco, filigrana conservata.",
+    "size": [
+      1384,
+      1920
+    ],
+    "thumb_size": [
+      303,
+      420
+    ],
+    "rights": "Autore della vignetta non identificato; scansione Biblioteca Gino Bianco. Diritti non accertati; filigrana conservata.",
+    "verification": "Verificati testata, data e immagine nella scansione della prima pagina. Firma da identificare; documento della stampa dei fuorusciti, non fascicolo del settimanale GL."
+  },
+  "p-herblock": {
+    "page": "https://www.loc.gov/exhibits/pointing-their-pens-editorial-cartoons/world-war-ii.html",
+    "image": "https://cdn.loc.gov/service/pnp/hlb/00200/00297r.jpg",
+    "note": "Herblock, They’re still there, boss!, 22 aprile 1941, Newspaper Enterprise Association. Anteprima pubblica della Library of Congress, LC-DIG-hlb-00297; © Herb Block Foundation.",
+    "size": [
+      444,
+      640
+    ],
+    "thumb_size": [
+      291,
+      420
+    ],
+    "rights": "Herbert Block (Herblock) · © Herb Block Foundation · riproduzione pubblica Library of Congress; condizioni della fonte",
+    "verification": "Titolo, autore, immagine e data dalla copia a stampa verificati nelle schede della Library of Congress, LC-DIG-hlb-00297."
   }
 }
