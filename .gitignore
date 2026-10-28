@@ -1,6 +1,3 @@
 __pycache__/
 .DS_Store
 privato/
-# copie private di opere protette: non pubblicarle
-img/p-*
-tn/p-*

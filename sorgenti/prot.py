@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
-# Opere ancora protette da diritto d'autore (o senza copia libera disponibile).
-# Nella pagina hanno la scheda completa e un riquadro che mostra l'immagine
-# solo se è presente in locale in privato/<file> (copia privata, mai pubblicata).
+# Opere aggiuntive, comprese quelle protette. Le immagini scaricate e le fonti
+# delle riproduzioni sono registrate in immagini.json e usano lo stesso visore.
 PROT = [
 dict(
  after=23, key="p-hf1932", file="heartfield-hitlergruss-1932.jpg",
@@ -104,12 +103,12 @@ dict(
  a="Una scena affollata e dinamica, costruita su grandi oggetti simbolici, baionette e pentole, che schiacciano figure piccole. Il grottesco viene dalle proporzioni."),
 dict(
  after=57, key="p-cantachiaro", file="cantachiaro-1944.jpg",
- title="Il discorso del Duce, annotato", author="Cantachiaro, diretto da Franco Monicelli", date="dicembre 1944", pub="Cantachiaro, Roma",
- link="https://en.wikipedia.org/wiki/Cantachiaro", where="Wikipedia (Cantachiaro)",
- d="Il settimanale ripubblica per intero il discorso tenuto da Mussolini a Milano due settimane prima, con titoli e commenti che lo chiamano «delirante» e «un Nerone che ha suonato la lira mentre l'Italia bruciava».",
- i="La satira più semplice: lasciar parlare il Duce. Pubblicato senza tagli e con le note a margine, il discorso doveva bastare da solo a mostrarne l'assurdità.",
- s="Cantachiaro nacque a Roma subito dopo la Liberazione, nel 1944. L'operazione non fu capita: L'Unità la denunciò come propaganda fascista, squadre di militanti ritirarono le copie dalle edicole, e la Commissione nazionale per la stampa sospese il giornale per una settimana. Fu il primo caso di libertà di stampa nell'Italia liberata.",
- a="È satira di montaggio più che di disegno: titolazione, impaginazione e commento trasformano un documento in una parodia."),
+ title="«Tutto il potere ai C.L.N.»", author="Cantachiaro, firma non identificata", date="21 ottobre 1944", pub="Cantachiaro, Roma",
+ link="https://patrimonio.archivio.senato.it/inventario/scheda/presidenti-del-senato/IT-AFS-058-000175/prime-crepe-nel-i-governo-bonomi", where="Archivio storico del Senato, fondo Ivanoe Bonomi, unità 69",
+ d="Da sei finestre di un palazzo si affacciano i rappresentanti dei partiti del CLN. Bonomi è rimasto sotto, con le mani alzate; un militare alleato indica la direzione accanto al cartello «Keep right».",
+ i="Lo slogan che promette tutto il potere ai comitati di liberazione diventa una scena di sfratto: il capo del governo deve capire quale spazio gli resta fra i partiti e gli Alleati.",
+ s="Cantachiaro nasce a Roma dopo la Liberazione. Il ritaglio è datato 21 ottobre 1944 nella documentazione del fondo Bonomi. Nel dicembre successivo il giornale susciterà una polemica ripubblicando con commenti satirici il discorso milanese di Mussolini.",
+ a="Una facciata di palazzo diventa una mappa del potere: finestre, bandiere e posizioni dei corpi rendono visibile il conflitto istituzionale."),
 dict(
  after="svg", key="p-producers", file="producers-1967.jpg",
  title="The Producers – «Springtime for Hitler»", author="Mel Brooks", date="1967", pub="film",
@@ -125,12 +124,12 @@ def _P(after, key, file, title, author, date, pub, link, where, d, i, s, a):
 
 _NEW = [
 _P(13, "p-beccogiallo-parigi", "becco-giallo-parigi-1927.jpg",
- "Il Becco Giallo in esilio", "Alberto Giannini e Alberto Cianca", "1927–1931", "Parigi",
- "https://en.wikipedia.org/wiki/Il_Becco_Giallo", "Wikipedia (Il Becco Giallo)",
- "Il settimanale chiuso dalle leggi fascistissime rinasce a Parigi, con la stessa testata e il merlo dal becco giallo, e si fa arrivare clandestinamente in Italia.",
- "L'ironia, stavolta, è nella storia del suo fondatore. Giannini, l'uomo a cui i fascisti avevano bruciato le copie e assaltato la casa, nel 1934 fondò Il Merlo, tacciato di filofascismo; Salvemini scrisse di lui che era «passato al nemico».",
- "Nell'agosto 1927 la nuova serie nacque d'accordo con la Concentrazione antifascista, l'alleanza dei partiti in esilio. Cianca, già direttore del Becco Giallo a Roma, a Parigi pubblicò con Carlo Rosselli anche il settimanale Giustizia e Libertà.",
- "La satira dell'esilio parla a due pubblici: i fuorusciti, che conoscono tutti i retroscena, e i lettori clandestini in Italia, che rischiano la galera per averla in tasca."),
+ "Il Becco Giallo clandestino: Mussolini sulla bara di Matteotti", "Chancel, secondo la didascalia de l'Unità", "fascicolo originario non accertato; riproduzione del 1994", "Il Becco Giallo clandestino",
+ "https://archivio.unita.news/assets/main/1994/05/21/page_031.pdf", "l'Unità, 21 maggio 1994, Cultura & Società, p. 3",
+ "Mussolini siede a braccia conserte su una bara con il nome Matteotti. La riproduzione conserva la didascalia che attribuisce la vignetta a Chancel.",
+ "Il dittatore tratta il corpo dell'avversario come un sedile. Il delitto, che dovrebbe comprometterlo, diventa letteralmente il sostegno del suo potere.",
+ "Il Becco Giallo fu ripubblicato a Parigi dal 1927 e diffuso clandestinamente in Italia. La fonte del 1994 identifica il giornale e l'autore del disegno, ma non il fascicolo: non si presenta come certa la data 1924 indicata in precedenti liste di lavoro.",
+ "La postura immobile e la bara bastano a formulare l'accusa. Il ritaglio viene da una riproduzione successiva; la ricerca della pagina originale resta indicata nel registro."),
 _P(35, "p-brecht", "brecht-arturo-ui.jpg",
  "La resistibile ascesa di Arturo Ui", "Bertolt Brecht", "scritto nel 1941, in scena dal 1958", "teatro",
  "https://it.wikipedia.org/wiki/La_resistibile_ascesa_di_Arturo_Ui", "Wikipedia (scheda dell'opera)",
@@ -260,3 +259,6 @@ def _insert_before(e, before):
 _before = {"p-badoglieide": "p-cantachiaro", "p-hilter": "p-amarcord"}
 for _e in _NEW2:
     _insert_before(_e, _before.get(_e["key"]))
+
+from completamenti import OPERE
+PROT.extend(_P(*opera) for opera in OPERE)

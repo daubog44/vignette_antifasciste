@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Versione a scorrimento continuo: tutte le immagini grandi, una dopo l'altra, senza schede né caroselli.
+# Immagini a scorrimento continuo e visore a carosello.
 import json, html, importlib
 import content as C
 from testi import T as TX
@@ -10,10 +10,26 @@ import os
 HERE = os.path.dirname(os.path.abspath(__file__))
 S = json.load(open(os.path.join(HERE, 'sizes.json')))
 CR = json.load(open(os.path.join(HERE, 'credits.json')))
+A = json.load(open(os.path.join(HERE, 'immagini.json')))
+P = {p['key']: p for p in PROT}
 esc = lambda s: html.escape(str(s), quote=True)
+
+for c in C.CHAPTERS:
+    figs = []
+    for f in c["figs"]:
+        figs.append(f)
+        for p in PROT:
+            if p["after"] == f[0]:
+                key = p["key"]
+                figs.append((key, p["title"], p["author"], p["date"], p["pub"], p["d"], False))
+                TX[key] = {k: p[k] for k in ("d", "i", "s", "a")}
+                CR[key] = {"page": A[key]["page"], "lic": A[key]["rights"]}
+    c["figs"] = figs
 
 def src(idx):
     k = str(idx)
+    if k in A:
+        return f"img/{k}.jpg", tuple(A[k]["size"])
     if idx == "svg":
         return "img/frecce.svg", tuple(S[k][0])
     if k.startswith("m") or (k.startswith("s") and k != "svg"):
@@ -92,20 +108,6 @@ h3.sec{font-family:var(--label); text-transform:uppercase; letter-spacing:.14em;
 .credits li{margin-bottom:4px}
 footer{margin-top:60px; padding:24px 0 56px; border-top:3px double var(--ink)}
 
-/* Opere protette */
-.ph{width:100%; max-width:640px; min-height:200px; border:1px dashed #4a443a; border-radius:6px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; padding:28px 18px; text-align:center; color:var(--stage-ink); font-family:var(--label)}
-.ph-lab{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--stage-muted)}
-.ph-btn{background:var(--accent); color:#16130f; text-decoration:none; font-weight:700; font-size:15px; letter-spacing:.04em; text-transform:uppercase; padding:11px 20px; border-radius:999px}
-.ph-src{font-size:13px; color:var(--stage-muted)}
-.ph-note{display:none; font-size:12.5px; color:var(--stage-muted); max-width:46ch}
-.ph-note code{color:var(--stage-ink)}
-.local .ph-note{display:block}
-.has-local .ph{display:none}
-.pbtn{all:unset; cursor:zoom-in; display:block; max-width:min(1500px,100%)}
-.pbtn[hidden]{display:none}
-.pbtn img{max-height:92vh; margin:0 auto; box-shadow:0 18px 50px rgba(0,0,0,.5); background:#fff}
-figure.prot .num{color:var(--accent)}
-
 /* Pulsante carosello */
 .cta{display:inline-flex; align-items:center; gap:10px; margin-top:22px; font-family:var(--label); font-weight:700; font-size:16px; letter-spacing:.04em; text-transform:uppercase; background:var(--ink); color:var(--paper); border:0; border-radius:999px; padding:13px 22px; cursor:pointer}
 .cta .tri{width:0; height:0; border-left:11px solid var(--accent); border-top:7px solid transparent; border-bottom:7px solid transparent}
@@ -172,20 +174,13 @@ def build():
             meta = " · ".join(x for x in [author, date, pub] if x)
             star = '<span class="star">Da vedere</span>' if big else ""
             load = "eager" if n < 2 else "lazy"
+            image_note = f'<p class="meta">{esc(A[idx]["note"])}</p>' if idx in A and A[idx]["note"] else ""
+            if idx in P:
+                image_note += f'<p class="meta"><a href="{esc(P[idx]["link"])}" target="_blank" rel="noopener">Fonte della scheda: {esc(P[idx]["where"])}</a></p>'
             o.append(f'<figure class="plate" data-i="{n}"><div class="stage"><button type="button" data-g="{n}" aria-label="Apri a schermo intero: {esc(title)}">'
                      f'<img src="{s}" width="{w}" height="{h}" loading="{load}" decoding="async" alt="{esc(title)} – {esc(author)}{(", " + esc(date)) if date else ""}"></button><p class="zoomhint">Tocca per ingrandire</p></div>'
-                     f'<figcaption><span class="num">{n+1:02d} / {len(ALL)}</span><h3>{esc(title)}</h3><p class="meta">{star}{esc(meta)}</p><p class="blk"><span class="lab">Cosa si vede</span>{esc(TX[idx]['d'])}</p><p class="blk iro"><span class="lab">{esc(TX[idx].get('il', "L'ironia"))}</span>{esc(TX[idx]['i'])}</p><p class="blk"><span class="lab">Il contesto</span>{esc(TX[idx]['s'])}</p><p class="blk"><span class="lab">Il segno</span>{esc(TX[idx]['a'])}</p></figcaption></figure>')
+                     f'<figcaption><span class="num">{n+1:02d} / {len(ALL)}</span><h3>{esc(title)}</h3><p class="meta">{star}{esc(meta)}</p>{image_note}<p class="blk"><span class="lab">Cosa si vede</span>{esc(TX[idx]['d'])}</p><p class="blk iro"><span class="lab">{esc(TX[idx].get('il', "L'ironia"))}</span>{esc(TX[idx]['i'])}</p><p class="blk"><span class="lab">Il contesto</span>{esc(TX[idx]['s'])}</p><p class="blk"><span class="lab">Il segno</span>{esc(TX[idx]['a'])}</p></figcaption></figure>')
             n += 1
-            for P in [q for q in PROT if q["after"] == idx]:
-                pm = " · ".join(x for x in [P["author"], P["date"], P["pub"]] if x)
-                o.append(f'<figure class="plate prot" data-local="privato/{esc(P["file"])}" data-t="{esc(P["title"])}" data-m="{esc(P["author"] + " · " + P["date"])}"><div class="stage">'
-                         f'<div class="ph"><span class="ph-lab">Opera protetta da diritto d\'autore</span>'
-                         f'<a class="ph-btn" href="{esc(P["link"])}" target="_blank" rel="noopener">Guardala qui ↗</a><span class="ph-src">{esc(P["where"])}</span>'
-                         f'<span class="ph-note">Copia privata: salvala come <code>privato/{esc(P["file"])}</code> accanto a questa pagina e comparirà qui.</span></div>'
-                         f'<button type="button" class="pbtn" hidden aria-label="Apri a schermo intero: {esc(P["title"])}"><img alt="{esc(P["title"])} – {esc(P["author"])}"></button></div>'
-                         f'<figcaption><span class="num">Scheda · opera protetta</span><h3>{esc(P["title"])}</h3><p class="meta">{esc(pm)}</p>'
-                         f'<p class="blk"><span class="lab">Cosa si vede</span>{esc(P["d"])}</p><p class="blk iro"><span class="lab">L\'ironia</span>{esc(P["i"])}</p>'
-                         f'<p class="blk"><span class="lab">Il contesto</span>{esc(P["s"])}</p><p class="blk"><span class="lab">Il segno</span>{esc(P["a"])}</p></figcaption></figure>')
     o.append('<div class="wrap tail" id="altro"><h2>Per approfondire</h2>')
     for title, intro, items in C.LINKS:
         o.append(f'<h3 class="sec">{esc(title)}</h3>')
@@ -196,7 +191,7 @@ def build():
         o.append('</ul>')
     o.append('<h3 class="sec">Una nota sulle fonti</h3>')
     for p in C.NOTE: o.append(f'<p class="note">{esc(p)}</p>')
-    o.append('</div></main><footer><div class="wrap"><h3 class="sec" style="margin-top:0">Crediti delle immagini</h3><p class="note">Tutte le immagini vengono da Wikimedia Commons. Sono di pubblico dominio salvo dove indicato; per quelle sotto licenza Creative Commons l\'attribuzione completa è nella scheda collegata.</p><ol class="credits">')
+    o.append('</div></main><footer><div class="wrap"><h3 class="sec" style="margin-top:0">Crediti delle immagini</h3><p class="note">Le immagini provengono da Wikimedia Commons e dalle fonti collegate qui sotto. Le opere protette restano dei rispettivi titolari. Per licenze, attribuzioni e condizioni di riuso consultare la scheda originale; le copie locali sono compresse e le miniature ridimensionate.</p><ol class="credits">')
     for c, f in ALL:
         cr = CR[str(f[0])]
         o.append(f'<li><a href="{esc(cr["page"])}" target="_blank" rel="noopener">{esc(f[1])}</a> – {esc(f[2])}, {esc(cr["lic"])}</li>')
@@ -234,15 +229,10 @@ def build():
   function reindex(){ ALL=[]; FIGS=[]; CAPS=[]; var fs=document.querySelectorAll('figure.plate');
     for(var k=0;k<fs.length;k++){ var f=fs[k], it=null;
       if(f.hasAttribute('data-i')) it=BASE[+f.getAttribute('data-i')];
-      else if(f.classList.contains('has-local')){ var pi=f.querySelector('.pbtn img'); it={s:pi.getAttribute('src'),th:pi.getAttribute('src'),w:pi.naturalWidth,h:pi.naturalHeight,t:f.getAttribute('data-t'),m:f.getAttribute('data-m')}; }
       if(!it) continue; var bb=f.querySelector('[data-g]'); if(bb) bb.setAttribute('data-g',ALL.length);
       ALL.push(it); FIGS.push(f); CAPS.push(f.querySelector('figcaption')); }
     if(built){ STRIP.innerHTML=''; built=false; } }
   reindex();
-  if(location.protocol==='file:'){ document.documentElement.classList.add('local');
-    Array.prototype.forEach.call(document.querySelectorAll('figure.prot'),function(f){ var t=new Image();
-      t.onload=function(){ var b=f.querySelector('.pbtn'); b.querySelector('img').src=t.src; b.hidden=false; b.setAttribute('data-g','0'); f.classList.add('has-local'); reindex(); };
-      t.src=f.getAttribute('data-local'); }); }
 
   function buildStrip(){ if(built) return; built=true;
     ALL.forEach(function(a,i){ var b=document.createElement('button'); b.type='button'; b.setAttribute('aria-label',(i+1)+'. '+a.t);
@@ -257,7 +247,7 @@ def build():
   function zoomAt(ns,px,py,anim){ ns=Math.max(1,Math.min(MAX,ns)); var r=S.getBoundingClientRect(), cx=px-r.left-r.width/2, cy=py-r.top-r.height/2;
     tx=cx-(ns/sc)*(cx-tx); ty=cy-(ns/sc)*(cy-ty); sc=ns; if(sc===1){tx=0;ty=0;} apply(anim); }
   function zoomCenter(f){ var r=S.getBoundingClientRect(); zoomAt(sc*f, r.left+r.width/2, r.top+r.height/2, true); }
-  function show(i){ g=(i+ALL.length)%ALL.length; sc=1; tx=0; ty=0; var a=ALL[g];
+  function show(i){ g=(i+ALL.length)%ALL.length; sc=1; tx=0; ty=0; var a=ALL[g]; MAX=Math.max(6,a.w/S.clientWidth,a.h/S.clientHeight);
     I.src=a.s; I.alt=a.t; T.textContent=a.t; M.textContent=a.m; layout();
     INFOIN.innerHTML=CAPS[g]?CAPS[g].innerHTML:'';  INFO.scrollTop=0;
     var bs=STRIP.children; for(var k=0;k<bs.length;k++) bs[k].classList.toggle('on',k===g);
